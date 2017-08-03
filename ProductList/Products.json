@@ -1,0 +1,287 @@
+[
+     {
+        "name":"Алкоголь",
+        "groupId":1
+     },
+     {
+        "name":"Молоко",
+        "groupId":1
+     },
+     {
+         "name":"Яйца",
+         "groupId":1
+     },
+     {
+         "name":"Хлеб",
+         "groupId":1
+     },
+
+     {
+         "name":"Туалетная бумага",
+         "groupId":1
+     },
+
+     {
+         "name":"Вода",
+         "groupId":1
+     },
+
+     {
+         "name":"Помидоры",
+         "groupId":1
+     },
+
+     {
+         "name":"Хлебобулочные",
+         "groupId":1
+     },
+
+     {
+         "name":"Желтый сыр",
+         "groupId":1
+     },
+     {
+         "name":"Пиво",
+         "groupId":1
+     },
+
+     {
+         "name":"Ветчина",
+         "groupId":1
+     },
+
+     {
+         "name":"Кофе",
+         "groupId":1
+     },
+
+     {
+         "name":"Сметана",
+         "groupId":1
+     },
+
+     {
+         "name":"Йогурт",
+         "groupId":1
+     },
+
+     {
+         "name":"Кетчуп",
+         "groupId":1
+     },
+
+     {
+         "name":"Чай",
+         "groupId":1
+     },
+
+     {
+         "name":"Шампунь",
+         "groupId":1
+     },
+
+     {
+         "name":"Сок",
+         "groupId":1
+     },
+
+     {
+         "name":"Цыпленок",
+         "groupId":1
+     },
+     {
+         "name":"Чипсы",
+         "groupId":1
+     },
+
+     {
+         "name":"Стиральный порошек",
+         "groupId":1
+     },
+
+     {
+         "name":"Подгузники",
+         "groupId":1
+     },
+
+     {
+         "name":"Мыло",
+         "groupId":1
+     },
+
+     {
+         "name":"Дезодорант",
+         "groupId":1
+     },
+
+     {
+         "name":"Сосиски",
+         "groupId":1
+     },
+
+     {
+         "name":"Мясо",
+         "groupId":1
+     },
+
+     {
+         "name":"Напиток",
+         "groupId":1
+     },
+
+     {
+         "name":"Шоколад",
+         "groupId":1
+     },
+
+     {
+         "name":"Зубная паста",
+         "groupId":1
+     },
+
+     {
+         "name":"Прокладки женские",
+         "groupId":1
+     },
+
+     {
+         "name":"Гель для душа",
+         "groupId":1
+     },
+
+     {
+         "name":"Рыба",
+         "groupId":1
+     },
+
+     {
+         "name":"Пирожные",
+         "groupId":1
+     },
+     {
+         "name":"Памперсы",
+         "groupId":1
+     },
+
+     {
+         "name":"Рис",
+         "groupId":1
+     },
+
+     {
+         "name":"CocaCola",
+         "groupId":1
+     },
+
+     {
+         "name":"Огурец",
+         "groupId":1
+     },
+
+     {
+         "name":"Макароны",
+         "groupId":1
+     },
+
+     {
+         "name":"Масло",
+         "groupId":1
+     },
+
+     {
+         "name":"Оливковое масло",
+         "groupId":1
+     },
+
+     {
+         "name":"Приправы",
+         "groupId":1
+     },
+    {
+        "name":"Лук",
+        "groupId":1
+    },
+     {
+         "name":"Хлопья для завтрака",
+         "groupId":1
+     },
+
+     {
+         "name":"Перец",
+         "groupId":1
+     },
+
+     {
+         "name":"Соус",
+         "groupId":1
+     },
+
+     {
+         "name":"Картофель",
+         "groupId":1
+     },
+
+     {
+         "name":"Майонез",
+         "groupId":1
+     },
+
+     {
+         "name":"Сыр фета",
+         "groupId":1
+     },
+
+     {
+         "name":"Тунец",
+         "groupId":1
+     },
+
+     {
+         "name":"Тампоны",
+         "groupId":1
+     },
+
+     {
+         "name":"Джем",
+         "groupId":1
+     },
+     {
+         "name":"Колбаса",
+         "groupId":1
+     },
+
+     {
+         "name":"Энергетики",
+         "groupId":1
+     },
+
+     {
+         "name":"Мороженое",
+         "groupId":1
+     },
+
+     {
+         "name":"Сахар",
+         "groupId":1
+     },
+
+     {
+         "name":"Салат",
+         "groupId":1
+     },
+
+     {
+         "name":"Освежитель воздуха",
+         "groupId":1
+     },
+
+     {
+         "name":"Корм",
+         "groupId":1
+     },
+
+     {
+         "name":"Плавленый сыр",
+         "groupId":1
+     }
+]

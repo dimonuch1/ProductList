@@ -13,6 +13,7 @@ import RealmSwift
 class ProductModelRealm: Object {
     
     dynamic var name = ""
+    dynamic var groupId = 0
     dynamic var id = 0
     
     override static func primaryKey() -> String? {
