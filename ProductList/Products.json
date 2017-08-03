@@ -5,40 +5,40 @@
      },
      {
         "name":"Молоко",
-        "groupId":1
+        "groupId":16
      },
      {
          "name":"Яйца",
-         "groupId":1
+         "groupId":16
      },
      {
          "name":"Хлеб",
-         "groupId":1
+         "groupId":29
      },
 
      {
          "name":"Туалетная бумага",
-         "groupId":1
+         "groupId":6
      },
 
      {
          "name":"Вода",
-         "groupId":1
+         "groupId":18
      },
 
      {
          "name":"Помидоры",
-         "groupId":1
+         "groupId":28
      },
 
      {
          "name":"Хлебобулочные",
-         "groupId":1
+         "groupId":29
      },
 
      {
          "name":"Желтый сыр",
-         "groupId":1
+         "groupId":16
      },
      {
          "name":"Пиво",
@@ -47,241 +47,236 @@
 
      {
          "name":"Ветчина",
-         "groupId":1
+         "groupId":17
      },
 
      {
          "name":"Кофе",
-         "groupId":1
+         "groupId":12
      },
 
      {
          "name":"Сметана",
-         "groupId":1
+         "groupId":16
      },
 
      {
          "name":"Йогурт",
-         "groupId":1
+         "groupId":16
      },
 
      {
          "name":"Кетчуп",
-         "groupId":1
+         "groupId":23
      },
 
      {
          "name":"Чай",
-         "groupId":1
+         "groupId":12
      },
 
      {
          "name":"Шампунь",
-         "groupId":1
+         "groupId":14
      },
 
      {
          "name":"Сок",
-         "groupId":1
+         "groupId":18
      },
 
      {
          "name":"Цыпленок",
-         "groupId":1
+         "groupId":17
      },
      {
          "name":"Чипсы",
-         "groupId":1
+         "groupId":20
      },
 
      {
          "name":"Стиральный порошек",
-         "groupId":1
+         "groupId":24
      },
 
      {
          "name":"Подгузники",
-         "groupId":1
+         "groupId":26
      },
 
      {
          "name":"Мыло",
-         "groupId":1
+         "groupId":14
      },
 
      {
          "name":"Дезодорант",
-         "groupId":1
+         "groupId":14
      },
 
      {
          "name":"Сосиски",
-         "groupId":1
+         "groupId":17
      },
 
      {
          "name":"Мясо",
-         "groupId":1
-     },
-
-     {
-         "name":"Напиток",
-         "groupId":1
+         "groupId":17
      },
 
      {
          "name":"Шоколад",
-         "groupId":1
+         "groupId":22
      },
 
      {
          "name":"Зубная паста",
-         "groupId":1
+         "groupId":14
      },
 
      {
          "name":"Прокладки женские",
-         "groupId":1
+         "groupId":14
      },
 
      {
          "name":"Гель для душа",
-         "groupId":1
+         "groupId":14
      },
 
      {
          "name":"Рыба",
-         "groupId":1
+         "groupId":21
      },
 
      {
          "name":"Пирожные",
-         "groupId":1
+         "groupId":22
      },
      {
          "name":"Памперсы",
-         "groupId":1
+         "groupId":26
      },
 
      {
          "name":"Рис",
-         "groupId":1
+         "groupId":13
      },
 
      {
          "name":"CocaCola",
-         "groupId":1
+         "groupId":18
      },
 
      {
          "name":"Огурец",
-         "groupId":1
+         "groupId":28
      },
 
      {
          "name":"Макароны",
-         "groupId":1
+         "groupId":13
      },
 
      {
          "name":"Масло",
-         "groupId":1
+         "groupId":15
      },
 
      {
          "name":"Оливковое масло",
-         "groupId":1
+         "groupId":15
      },
 
      {
          "name":"Приправы",
-         "groupId":1
+         "groupId":23
      },
     {
         "name":"Лук",
-        "groupId":1
+        "groupId":28
     },
      {
          "name":"Хлопья для завтрака",
-         "groupId":1
+         "groupId":13
      },
 
      {
          "name":"Перец",
-         "groupId":1
+         "groupId":28
      },
 
      {
          "name":"Соус",
-         "groupId":1
+         "groupId":23
      },
 
      {
          "name":"Картофель",
-         "groupId":1
+         "groupId":28
      },
 
      {
          "name":"Майонез",
-         "groupId":1
+         "groupId":23
      },
 
      {
          "name":"Сыр фета",
-         "groupId":1
+         "groupId":16
      },
 
      {
          "name":"Тунец",
-         "groupId":1
+         "groupId":21
      },
 
      {
          "name":"Тампоны",
-         "groupId":1
+         "groupId":14
      },
 
      {
          "name":"Джем",
-         "groupId":1
+         "groupId":22
      },
      {
          "name":"Колбаса",
-         "groupId":1
+         "groupId":17
      },
 
      {
          "name":"Энергетики",
-         "groupId":1
+         "groupId":18
      },
 
      {
          "name":"Мороженое",
-         "groupId":1
+         "groupId":22
      },
 
      {
          "name":"Сахар",
-         "groupId":1
+         "groupId":13
      },
 
      {
          "name":"Салат",
-         "groupId":1
+         "groupId":4
      },
 
      {
          "name":"Освежитель воздуха",
-         "groupId":1
+         "groupId":6
      },
 
      {
          "name":"Корм",
-         "groupId":1
+         "groupId":27
      },
 
      {
          "name":"Плавленый сыр",
-         "groupId":1
+         "groupId":17
      }
 ]
