@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var realm = try! Realm()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        
+        
         return true
     }
 
@@ -40,6 +49,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+//MARK: - Import Data
+    
+    func ImportData() {
+        //Import Groups
+        if let path7 = Bundle.main.path(forResource: "Group", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path7), options: .alwaysMapped)
+                let jsonObj = JSON(data: data)
+                if jsonObj != JSON.null {
+                    try! realm.write {
+                        for obj in jsonObj {
+                            let group = GroupModelRealm()
+                            group.id = obj.1["id"].int!
+                            group.name = obj.1["name"].string!
+                            realm.add(group)
+                        }
+                    }
+                } else {
+                    print("Could not get json from file, make sure that file contains valid json.")
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+        print("Invalid filename/path.")
+        }
+    }
+    
 
 
 }
