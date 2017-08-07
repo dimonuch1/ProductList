@@ -10,6 +10,8 @@
 		32473D7B1F33563C005C7BB9 /* GroupModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32473D7A1F33563C005C7BB9 /* GroupModelRealm.swift */; };
 		32473D7D1F335B6F005C7BB9 /* ProductModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32473D7C1F335B6F005C7BB9 /* ProductModelRealm.swift */; };
 		32473D801F335D27005C7BB9 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 32473D7F1F335D27005C7BB9 /* Products.json */; };
+		32871D681F388F6C006E6942 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32871D671F388F6C006E6942 /* List.swift */; };
+		32871D6B1F38A9CF006E6942 /* ButtonCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32871D6A1F38A9CF006E6942 /* ButtonCorner.swift */; };
 		328E05CB1F31F33400D9824F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E05CA1F31F33400D9824F /* AppDelegate.swift */; };
 		328E05CD1F31F33400D9824F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E05CC1F31F33400D9824F /* ViewController.swift */; };
 		328E05D01F31F33500D9824F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328E05CE1F31F33500D9824F /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		32473D7A1F33563C005C7BB9 /* GroupModelRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModelRealm.swift; sourceTree = "<group>"; };
 		32473D7C1F335B6F005C7BB9 /* ProductModelRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModelRealm.swift; sourceTree = "<group>"; };
 		32473D7F1F335D27005C7BB9 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
+		32871D671F388F6C006E6942 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		32871D6A1F38A9CF006E6942 /* ButtonCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCorner.swift; sourceTree = "<group>"; };
 		328E05C71F31F33400D9824F /* ProductList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328E05CA1F31F33400D9824F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		328E05CC1F31F33400D9824F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				32473D7A1F33563C005C7BB9 /* GroupModelRealm.swift */,
 				32473D7C1F335B6F005C7BB9 /* ProductModelRealm.swift */,
+				32871D671F388F6C006E6942 /* List.swift */,
+				32871D6A1F38A9CF006E6942 /* ButtonCorner.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -64,6 +70,14 @@
 				32473D7F1F335D27005C7BB9 /* Products.json */,
 			);
 			name = Files;
+			sourceTree = "<group>";
+		};
+		32871D691F389E85006E6942 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				328E05CC1F31F33400D9824F /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		328E05BE1F31F33300D9824F = {
@@ -87,10 +101,10 @@
 		328E05C91F31F33400D9824F /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				32871D691F389E85006E6942 /* Controller */,
 				32473D7E1F335D0C005C7BB9 /* Files */,
 				32473D791F3355F6005C7BB9 /* Model */,
 				328E05CA1F31F33400D9824F /* AppDelegate.swift */,
-				328E05CC1F31F33400D9824F /* ViewController.swift */,
 				328E05CE1F31F33500D9824F /* Main.storyboard */,
 				328E05D11F31F33500D9824F /* Assets.xcassets */,
 				328E05D31F31F33500D9824F /* LaunchScreen.storyboard */,
@@ -243,7 +257,9 @@
 			files = (
 				328E05CD1F31F33400D9824F /* ViewController.swift in Sources */,
 				32473D7D1F335B6F005C7BB9 /* ProductModelRealm.swift in Sources */,
+				32871D6B1F38A9CF006E6942 /* ButtonCorner.swift in Sources */,
 				328E05CB1F31F33400D9824F /* AppDelegate.swift in Sources */,
+				32871D681F388F6C006E6942 /* List.swift in Sources */,
 				32473D7B1F33563C005C7BB9 /* GroupModelRealm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

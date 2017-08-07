@@ -22,6 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
+        //let utilityQueue = DispatchQueue.global(qos: .utility)
+        
+        try! realm.write {
+             realm.deleteAll()
+        }
+        
+        //utilityQueue.async {
+        //DispatchQueue.global().async {
+        //DispatchQueue(label: "background").async {
+        self.ImportGroup()
+        self.ImporProducts()
+        //}
+        //}
         
         
         
@@ -52,21 +65,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //MARK: - Import Data
     
-    func ImportData() {
+    func ImportGroup() {
         //Import Groups
-        if let path7 = Bundle.main.path(forResource: "Group", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "Group", ofType: "json") {
             do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path7), options: .alwaysMapped)
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj = JSON(data: data)
                 if jsonObj != JSON.null {
-                    try! realm.write {
-                        for obj in jsonObj {
+                    //try! realm.write {
+                    realm.beginWrite()
+                    for obj in jsonObj {
                             let group = GroupModelRealm()
                             group.id = obj.1["id"].int!
                             group.name = obj.1["name"].string!
                             realm.add(group)
                         }
-                    }
+                        print("finish upload groups")
+                    try! realm.commitWrite()
+                    //}
                 } else {
                     print("Could not get json from file, make sure that file contains valid json.")
                 }
@@ -77,6 +93,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Invalid filename/path.")
         }
     }
+    
+    func ImporProducts() {
+        if let path = Bundle.main.path(forResource: "Products", ofType: "json") {
+            do {
+                let data = try Data(contentsOf:URL(fileURLWithPath: path),options: .alwaysMapped)
+                let jsonObj = JSON(data:data)
+                if jsonObj != JSON.null {
+                    //try! realm.write {
+                    realm.beginWrite()
+                    for obj in jsonObj {
+                            let product = ProductModelRealm()
+                            var myvalue = realm.objects(ProductModelRealm.self).map{$0.id}.max() ?? 0
+                            myvalue = myvalue + 1
+                            product.id = myvalue
+                            product.name = obj.1["name"].string!
+                            product.groupId = obj.1["groupId"].int!
+                            realm.add(product)
+                        }
+                        print("finish upload products")
+                    try! realm.commitWrite()
+                    //}
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
+        
+        }
+    
     
 
 
