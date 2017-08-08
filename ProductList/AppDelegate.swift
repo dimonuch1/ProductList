@@ -21,22 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        //let utilityQueue = DispatchQueue.global(qos: .utility)
-        
         try! realm.write {
              realm.deleteAll()
         }
         
-        //utilityQueue.async {
-        //DispatchQueue.global().async {
-        //DispatchQueue(label: "background").async {
         self.ImportGroup()
         self.ImporProducts()
-        //}
-        //}
-        
-        
+        setColorBarMenu()
         
         return true
     }
@@ -63,6 +54,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    func setColorBarMenu() {
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds (to: #selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = UIColor(red: 80/255, green: 200/255, blue: 120/255, alpha: 1.0)
+        }
+        
+        UINavigationBar.appearance().backgroundColor =  UIColor(red: 117/255, green: 219/255, blue: 27/255, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+    }
+    
 //MARK: - Import Data
     
     func ImportGroup() {
@@ -72,7 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj = JSON(data: data)
                 if jsonObj != JSON.null {
-                    //try! realm.write {
                     realm.beginWrite()
                     for obj in jsonObj {
                             let group = GroupModelRealm()
@@ -80,9 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             group.name = obj.1["name"].string!
                             realm.add(group)
                         }
-                        print("finish upload groups")
                     try! realm.commitWrite()
-                    //}
                 } else {
                     print("Could not get json from file, make sure that file contains valid json.")
                 }
@@ -100,7 +101,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let data = try Data(contentsOf:URL(fileURLWithPath: path),options: .alwaysMapped)
                 let jsonObj = JSON(data:data)
                 if jsonObj != JSON.null {
-                    //try! realm.write {
                     realm.beginWrite()
                     for obj in jsonObj {
                             let product = ProductModelRealm()
@@ -111,9 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             product.groupId = obj.1["groupId"].int!
                             realm.add(product)
                         }
-                        print("finish upload products")
                     try! realm.commitWrite()
-                    //}
                 }
             } catch let error {
                 print(error.localizedDescription)
@@ -122,10 +120,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Invalid filename/path.")
         }
         
-        }
-    
-    
-
-
+    }
 }
 
