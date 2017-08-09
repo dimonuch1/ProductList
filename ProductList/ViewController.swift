@@ -20,16 +20,34 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        listsLists.dataSource = listsLists
+        listsLists.delegate = listsLists
+        //reloadView()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reloadView()
+    }
+    
+//MARK: - somefunction
+    func reloadView() {
         if resultLists.count > 0 {
-            
+            listsLists.reloadData()
+            listsLists.isHidden = false
+            self.view.viewWithTag(3)?.removeFromSuperview()
+            self.view.viewWithTag(4)?.removeFromSuperview()
         } else {
             listsLists.isHidden = true
-           
+            
             let image = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.view.frame.width/3, height: self.view.frame.width/3)))
             image.center = CGPoint(x: self.view.center.x, y: self.view.center.y - (self.view.center.y / 5))
-            image.tag = 1
+            image.tag = 3
             image.image = UIImage(named: "List")
+            image.isUserInteractionEnabled = true
             self.view.addSubview(image)
             
             let str = "  Создайте свой первый список - просто нажмите на синюю кнопку"
@@ -37,7 +55,7 @@ class ViewController: UIViewController {
             lable.numberOfLines = 2
             lable.textColor = UIColor.gray
             lable.text = str
-            lable.tag = 2
+            lable.tag = 4
             lable.font=UIFont.systemFont(ofSize: 21)
             
             self.view.addSubview(lable)
@@ -47,9 +65,6 @@ class ViewController: UIViewController {
             self.view.addConstraint(NSLayoutConstraint(item: lable, attribute: .leadingMargin, relatedBy: .equal,toItem: self.view, attribute: .leadingMargin, multiplier: 1.0, constant: 10))
             self.view.addConstraint(NSLayoutConstraint(item: lable, attribute: .trailingMargin, relatedBy: .equal,toItem:  self.view, attribute: .trailingMargin, multiplier: 1.0, constant: -10))
         }
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }

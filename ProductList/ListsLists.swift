@@ -23,11 +23,11 @@ class ListsLists: UICollectionView,UICollectionViewDataSource,UICollectionViewDe
    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
+        cell.backgroundColor = UIColor.black
         return cell
     }
     
-    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 }
