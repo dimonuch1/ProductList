@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322627851F44CC5C009E35EB /* CollectionViewCellLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322627841F44CC5C009E35EB /* CollectionViewCellLists.swift */; };
 		32473D7B1F33563C005C7BB9 /* GroupModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32473D7A1F33563C005C7BB9 /* GroupModelRealm.swift */; };
 		32473D7D1F335B6F005C7BB9 /* ProductModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32473D7C1F335B6F005C7BB9 /* ProductModelRealm.swift */; };
 		32473D801F335D27005C7BB9 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 32473D7F1F335D27005C7BB9 /* Products.json */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322627841F44CC5C009E35EB /* CollectionViewCellLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellLists.swift; sourceTree = "<group>"; };
 		32473D7A1F33563C005C7BB9 /* GroupModelRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModelRealm.swift; sourceTree = "<group>"; };
 		32473D7C1F335B6F005C7BB9 /* ProductModelRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModelRealm.swift; sourceTree = "<group>"; };
 		32473D7F1F335D27005C7BB9 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		322627831F44CC17009E35EB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				322627841F44CC5C009E35EB /* CollectionViewCellLists.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		32473D791F3355F6005C7BB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		32516C291F39C05E0099EFF8 /* ListsLists */ = {
 			isa = PBXGroup;
 			children = (
+				322627831F44CC17009E35EB /* Cell */,
 				32473D791F3355F6005C7BB9 /* Model */,
 				32871D691F389E85006E6942 /* Controller */,
 			);
@@ -279,6 +290,7 @@
 			files = (
 				3250B99E1F3B0928008CE265 /* CreateListViewController.swift in Sources */,
 				328E05CD1F31F33400D9824F /* ViewController.swift in Sources */,
+				322627851F44CC5C009E35EB /* CollectionViewCellLists.swift in Sources */,
 				32473D7D1F335B6F005C7BB9 /* ProductModelRealm.swift in Sources */,
 				32516C2B1F39C68A0099EFF8 /* ListsLists.swift in Sources */,
 				32871D6B1F38A9CF006E6942 /* ButtonCorner.swift in Sources */,

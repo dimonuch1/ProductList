@@ -36,10 +36,11 @@ class ViewController: UIViewController {
 //MARK: - somefunction
     func reloadView() {
         if resultLists.count > 0 {
-            listsLists.reloadData()
-            listsLists.isHidden = false
+            
             self.view.viewWithTag(3)?.removeFromSuperview()
             self.view.viewWithTag(4)?.removeFromSuperview()
+            listsLists.reloadData()
+            listsLists.isHidden = false
         } else {
             listsLists.isHidden = true
             
@@ -65,6 +66,5 @@ class ViewController: UIViewController {
             self.view.addConstraint(NSLayoutConstraint(item: lable, attribute: .leadingMargin, relatedBy: .equal,toItem: self.view, attribute: .leadingMargin, multiplier: 1.0, constant: 10))
             self.view.addConstraint(NSLayoutConstraint(item: lable, attribute: .trailingMargin, relatedBy: .equal,toItem:  self.view, attribute: .trailingMargin, multiplier: 1.0, constant: -10))
         }
-
     }
 }
