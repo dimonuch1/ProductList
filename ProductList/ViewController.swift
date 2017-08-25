@@ -22,9 +22,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         listsLists.dataSource = listsLists
         listsLists.delegate = listsLists
+        
         //reloadView()
+        //setInsetsForCollectionView()
+        
+        
     }
 
+    func setInsetsForCollectionView() {
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 0, right: 15)
+        layout.itemSize = CGSize(width: width*0.95 , height: height/7)
+        listsLists.collectionViewLayout = layout
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
