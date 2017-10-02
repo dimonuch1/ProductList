@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.ImporProducts()
         setColorBarMenu()
         
+        
         return true
     }
 
@@ -58,12 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        if statusBar.responds (to: #selector(setter: UIView.backgroundColor)) {
-            statusBar.backgroundColor = UIColor(red: 80/255, green: 200/255, blue: 120/255, alpha: 1.0)
-        }
+//        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+//        if statusBar.responds (to: #selector(setter: UIView.backgroundColor)) {
+//            statusBar.backgroundColor = UIColor(red: 80/255, green: 200/255, blue: 120/255, alpha: 1.0)
+//        }
         
-        UINavigationBar.appearance().backgroundColor =  UIColor(red: 117/255, green: 219/255, blue: 27/255, alpha: 1.0)
+        //UINavigationBar.appearance().backgroundColor =  UIColor(red: 117/255, green: 219/255, blue: 27/255, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
     }
     

@@ -10,6 +10,16 @@ import UIKit
 import Realm
 import RealmSwift
 
+extension UINavigationBar {
+    
+    func transparentNavigationBar() {
+        self.setBackgroundImage(UIImage(), for: .default)
+        self.shadowImage = UIImage()
+        self.isTranslucent = true
+    }
+}
+
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var addList: UIButton!
@@ -25,18 +35,25 @@ class ViewController: UIViewController {
         
         //reloadView()
         //setInsetsForCollectionView()
-        
-        
+        navigationController?.navigationBar.transparentNavigationBar()
+        setColors()
+    }
+    
+    func setColors() {
+        self.navigationController?.navigationBar.backgroundColor = UIColor.green
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds (to: #selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = UIColor(red: 80/255, green: 200/255, blue: 120/255, alpha: 1.0)
+        }
     }
 
     func setInsetsForCollectionView() {
-        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let width = UIScreen.main.bounds.width
+        let width  = UIScreen.main.bounds.width
         let height = UIScreen.main.bounds.height
         
         layout.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 0, right: 15)
-        layout.itemSize = CGSize(width: width*0.95 , height: height/7)
+        layout.itemSize = CGSize(width: width * 0.95 , height: height / 7)
         listsLists.collectionViewLayout = layout
     }
     
@@ -72,7 +89,7 @@ class ViewController: UIViewController {
             lable.textColor = UIColor.gray
             lable.text = str
             lable.tag = 4
-            lable.font=UIFont.systemFont(ofSize: 21)
+            lable.font = UIFont.systemFont(ofSize: 21)
             
             self.view.addSubview(lable)
             lable.translatesAutoresizingMaskIntoConstraints = false
@@ -81,5 +98,6 @@ class ViewController: UIViewController {
             self.view.addConstraint(NSLayoutConstraint(item: lable, attribute: .leadingMargin, relatedBy: .equal,toItem: self.view, attribute: .leadingMargin, multiplier: 1.0, constant: 10))
             self.view.addConstraint(NSLayoutConstraint(item: lable, attribute: .trailingMargin, relatedBy: .equal,toItem:  self.view, attribute: .trailingMargin, multiplier: 1.0, constant: -10))
         }
+        setColors()
     }
 }

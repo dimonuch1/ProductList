@@ -79,13 +79,13 @@ class ListsLists: UICollectionView,UICollectionViewDataSource,UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellLists", for: indexPath) as! CollectionViewCellLists
         cell.name.text = resultLists[indexPath.row].name
         cell.name.font = UIFont(name: cell.name.font.fontName, size: textFontSize)
-        cell.layer.cornerRadius = 3
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowRadius = 1
+        cell.layer.cornerRadius  = 3
+        cell.layer.shadowColor   = UIColor.black.cgColor
+        cell.layer.shadowRadius  = 1
         cell.layer.shadowOpacity = 1
-        cell.layer.shadowOffset = CGSize(width: 0, height: 1)
+        cell.layer.shadowOffset  = CGSize(width: 0, height: 1)
         
-        cell.clipsToBounds = false
+        cell.clipsToBounds       = false
         cell.layer.masksToBounds = false
         
         return cell

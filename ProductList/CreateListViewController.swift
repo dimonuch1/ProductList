@@ -49,7 +49,6 @@ class CreateListViewController: UIViewController {
             } else {
                 return 28.0
             }
-
         }
     }
 
@@ -63,7 +62,23 @@ class CreateListViewController: UIViewController {
         
         textField.font = UIFont(name: (textField.font?.fontName)!, size: textFontSize)
         // Do any additional setup after loading the view.
+    
+    
+    
+    navigationController?.navigationBar.transparentNavigationBar()
+    setColors()
+    
     }
+
+    func setColors() {
+        navigationController?.navigationBar.backgroundColor = UIColor(red: 76/255, green: 149/255, blue: 230/255, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor.white
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds (to: #selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = UIColor(red: 61/255, green: 134/255, blue: 251/255, alpha: 1)
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -73,15 +88,14 @@ class CreateListViewController: UIViewController {
 
     func setColorBarMenu() {
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        //UIApplication.shared.statusBarStyle = .lightContent
         
-        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        if statusBar.responds (to: #selector(setter: UIView.backgroundColor)) {
-            statusBar.backgroundColor = UIColor(red: 61/255, green: 134/255, blue: 251/255, alpha: 1)
-        }
         
-        UINavigationBar.appearance().backgroundColor =  UIColor.blue
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        
+        
+        //UINavigationBar.appearance().backgroundColor =  UIColor.blue
+        //UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
     }
     
     func textFieldDidChange(_ textField: UITextField) {
