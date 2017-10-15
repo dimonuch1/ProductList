@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         try! realm.write {
-             realm.deleteAll()
+            realm.deleteAll()
         }
         
         self.ImportGroup()
@@ -110,6 +110,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             product.id = myvalue
                             product.name = obj.1["name"].string!
                             product.groupId = obj.1["groupId"].int!
+                            product.popular = obj.1["popular"].boolValue
+                            product.recent = obj.1["recent"].boolValue
                             realm.add(product)
                         }
                     try! realm.commitWrite()
